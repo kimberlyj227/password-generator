@@ -18,66 +18,36 @@ function generatePassword() {
 
     // validates whether user input is between 8 and 128
 
-    if (length >= 8 || length <= 128) {
+    if (length >= 8 && length <= 128) {
         var confirmLower = confirm("Use lowercase letters?");
         var confirmUpper = confirm("Use uppercase letters?");
         var confirmNum = confirm("Use numbers?");
         var confirmSpecial = confirm("Use special characters?");
     } else {
         alert("Please enter a number between 8 and 128. Try again.");
+        
     };
 
     // conditions for user choices
 
-    // 4 conditions true
-
-    if (confirmLower && confirmUpper && confirmNum && confirmSpecial) {
-        userChoices = [...lower, ...upper, ...numbers, ...special];
+    
+    if (confirmLower) {
+        userChoices = [...userChoices, ...lower];
     }
 
-    // 3 conditions true
-
-    else if (confirmLower && confirmUpper && confirmNum) {
-        userChoices = [...lower, ...upper, ...numbers];
-    } else if (confirmLower && confirmUpper && confirmSpecial) {
-        userChoices = [...lower, ...upper, ...special];
-    } else if (confirmLower && confirmNum && confirmSpecial) {
-        userChoices = [...lower, ...numbers, ...special];
-    } else if (confirmUpper && confirmNum && confirmSpecial) {
-        userChoices = [...upper, ...numbers, ...special];
+    if (confirmUpper) {
+        userChoices = [...userChoices, ...upper];
     }
 
-    // 2 conditions true
-
-    else if (confirmLower && confirmUpper) {
-        userChoices = [...lower, ...upper];
-    } else if (confirmLower && confirmNum) {
-        userChoices = [...lower, ...numbers];
-    } else if (confirmLower && confirmSpecial) {
-        userChoices = [...lower, ...special];
-    } else if (confirmUpper && confirmNum) {
-        userChoices = [...upper, ...numbers];
-    } else if (confirmUpper && confirmSpecial) {
-        userChoices = [...upper, ...special];
-    } else if (confirmNum && confirmSpecial) {
-        userChoices = [...numbers, ...special];
+    if (confirmNum) {
+        userChoices = [...userChoices, ...numbers];
     }
 
-    // 1 condition true
-
-    else if (confirmLower) {
-        userChoices = [...lower];
-    } else if (confirmUpper) {
-        userChoices = [...upper];
-    } else if (confirmNum) {
-        userChoices = [...numbers];
-    } else if (confirmSpecial) {
-        userChoices = [...special];
+    if (confirmSpecial) {
+        userChoices = [...userChoices, ...special];
     }
 
-    // 0 conditions true
-
-    else if (!confirmLower && !confirmUpper && !confirmNum && !confirmSpecial) {
+    if (!confirmLower && !confirmUpper && !confirmNum && !confirmSpecial) {
         alert("You must choose at least ONE parameter. Try again");
     };
 
