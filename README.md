@@ -2,6 +2,10 @@
 
 ## About this project
 
+This app was created to allow users to create a secure randomly-generated password. Users will be able to input the length of the password along with choosing what kind of characters they want included in the password. 
+
+After the password is generated, the user will be able to copy the password to their clipboard using the "copy password" button.
+
 
 ## Steps
 
@@ -41,4 +45,13 @@ Will alert the user to choose at least one parameter.
 
 
 ## Links
+
+[live site] (https://kimberlyj227.github.io/password-generator/)
+[github profile] (https://github.com/kimberlyj227/password-generator)
+
+## Demonstration
+
+Video demonstrating how the app works:
+
+![demonstration video] (pass_demo.mp4)
 
