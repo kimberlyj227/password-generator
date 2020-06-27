@@ -49,9 +49,5 @@ Will alert the user to choose at least one parameter.
 [live site] (https://kimberlyj227.github.io/password-generator/)
 [github profile] (https://github.com/kimberlyj227/password-generator)
 
-## Demonstration
 
-Video demonstrating how the app works:
-
-![demonstration video] (pass_demo.mp4)
 
